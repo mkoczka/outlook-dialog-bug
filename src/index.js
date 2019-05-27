@@ -18,12 +18,15 @@ Office.initialize = reason => {
 async function auth() {
   Office.context.ui.displayDialogAsync(
     location.origin + "/dialog.html",
-    dialog => {
-      dialog.addEventHandler(Office.EventType.DialogMessageReceived, a =>
-        console.log("This will not  get called")
+    result => {
+      dialog = result.value;
+      dialog.addEventHandler(
+        Microsoft.Office.WebExtension.EventType.DialogMessageReceived,
+        a => console.log("This will not  get called", a)
       );
-      dialog.addEventHandler(Office.EventType.DialogEventReceived, a =>
-        console.log("This will not  get called")
+      dialog.addEventHandler(
+        Microsoft.Office.WebExtension.EventType.DialogEventReceived,
+        a => console.log("This will not  get called", a)
       );
     }
   );
