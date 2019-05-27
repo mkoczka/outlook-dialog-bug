@@ -12,7 +12,7 @@
   <Id>fc778dc9-752b-472d-9d1d-b77cf2513aed</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
-  <Version>1.0.0.0</Version>
+  <Version>1.1.0.0</Version>
   <ProviderName>Outlook Dialog Bug</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
@@ -28,9 +28,8 @@
 
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
   <AppDomains>
-    <AppDomain>AppDomain1</AppDomain>
-    <AppDomain>AppDomain2</AppDomain>
-    <AppDomain>AppDomain3</AppDomain>
+    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://outlook.live.com</AppDomain>
   </AppDomains>
   <!--End Basic Settings. -->
 
